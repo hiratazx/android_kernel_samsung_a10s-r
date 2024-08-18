@@ -12,7 +12,7 @@ $ cd kernel-a10s
 $ ls kernel/arch/arm64/configs
 
 # Export the defconfig
-$ export DEFCONFIG=rsuntk_defconfig
+$ export DEFCONFIG=yukiprjkt_defconfig
 
 # Export LLVM path
 $ export PATH=/home/$(whoami)/toolchains/clang-r428724/bin:$PATH
@@ -26,8 +26,6 @@ $ bash build_kernel.sh
 
 ## Credits
 
-2024 Rissu
-
-2024 Rissu Projects
-
-2024 yukiprjkt
+- **2024 Rissu**
+- **2024 Rissu Projects**
+- **2024 yukiprjkt**
