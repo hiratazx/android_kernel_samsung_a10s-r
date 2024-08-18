@@ -32,6 +32,9 @@ if [ -d /rsuntk ]; then
 	export PATH=/rsuntk/env/clang-13/bin:$PATH
  	export DEFCONFIG="yukiprjkt_defconfig"
 else
+	if [ -z $CROSS_COMPILE ]; then
+		pr_err "Invalid empty variable for \$CROSS_COMPILE"
+	fi
 	if [ -z $PATH ]; then
 		pr_err "Invalid empty variable for \$PATH"
 	fi
@@ -41,7 +44,8 @@ else
 	fi
 fi
 
-# Now support FULL LLVM!
+# Now support 99.9% LLVM (Why? Because for some weird reason, 
+# if we didn't include CROSS_COMPILE, it just messed up some file, so we keep it.)
 export LLVM=1
 export CC=clang
 export LD=ld.lld
