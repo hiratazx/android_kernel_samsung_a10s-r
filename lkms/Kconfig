@@ -1,0 +1,13 @@
+#
+# Rissu Projects (C) 2024
+# Kconfig for Mediatek LKM
+# 
+# Files under GPLv2 License
+# Copyright(C) 2016 MediaTek Inc.
+#
+
+config BUILD_MTK_LKM
+	tristate "Build Mediatek LKM"
+	default m
+	help
+		"Build source as Module (m), Inline (y), Don't build (n)"
